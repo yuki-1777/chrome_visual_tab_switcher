@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Tab Group Switcher",
+  "version": "2.0",
+  "description": "Option+Qでグループスイッチャーを表示します。",
+  "background": {
+    "service_worker": "background.js"
+  },
+    "permissions": [
+    "tabs",
+    "tabGroups"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_start" 
+    }
+  ]
+}
